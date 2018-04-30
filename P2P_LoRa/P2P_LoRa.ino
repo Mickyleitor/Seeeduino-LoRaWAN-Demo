@@ -67,17 +67,6 @@ void loop(void)
       break;
     }
     case 2 : {
-      switch(buffer[2]){
-        case CMD1 : {
-          writeLogMessage("The analogical value of A0 from device[%d] is %d",buffer[0],buffer[5]);
-          break;
-        }
-      }
-      status = 3;
-      break;
-    }
-    case 3 : {
-      memset(buffer, 0, 32);
       currentAskingID++;
       if(currentAskingID > NUM_DEVICES){
         currentAskingID = 1;
@@ -98,6 +87,16 @@ void loop(void)
       }
       break;
     }
+    case 3 : {
+      switch(buffer[2]){
+        case CMD1 : {
+          writeLogMessage("The analogical value of A0 from device[%d] is %d",buffer[0],buffer[5]);
+          break;
+        }
+      }
+      status = 2;
+      break;
+    }
   }
 }
 
@@ -107,7 +106,7 @@ void decode_msg(){
     status = 1;
   }else if( buffer[1]==myID && buffer[3]==ACK ) {
     writeLogMessage("The device[%d] has answered the command with frame number [%d] to me",buffer[0],buffer[4]);
-    status = 2;
+    status = 3;
   }else{
     writeLogMessage("A message from device[%d] have been ignored.",buffer[0]);
   }
