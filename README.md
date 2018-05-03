@@ -1,7 +1,7 @@
 # PervasiveSystem2018_LoRaWAN
 Hands-On Example to demostrate the technology behind LoRaWAN with Seeeduino LoRa board
 
-## Visual representation of the system
+## Visual representation
 ![Visual representation](https://raw.githubusercontent.com/Mickyleitor/PervasiveSystem2018_LoRaWAN/master/Docs/Visual-representation.png)
 
 ## Hands-On 
