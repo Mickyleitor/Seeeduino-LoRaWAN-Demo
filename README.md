@@ -3,8 +3,6 @@ Hands-On Example to demostrate the technology behind LoRaWAN with Seeeduino LoRa
 
 ## Visual representation of the system
 ![Visual representation](https://raw.githubusercontent.com/Mickyleitor/PervasiveSystem2018_LoRaWAN/master/Docs/Visual-representation.png)
-## Technical Diagram of the Finite state machine
-![Finite-State machine](https://raw.githubusercontent.com/Mickyleitor/PervasiveSystem2018_LoRaWAN/master/Docs/State-Machine.png)
 
 ## Hands-On 
 * Plug-in two boards (Make sure they are Seeeduino LoRa board)
@@ -22,3 +20,6 @@ And COMMAND is the type of command you will request to the other board. 1 charac
 * 'b' : Get RSSI from both devices
 * 'c' : Get GPS based latitude position
 * 'd' : Get GPS based longitude position
+
+## Technical Diagram of the Finite state machine
+![Finite-State machine](https://raw.githubusercontent.com/Mickyleitor/PervasiveSystem2018_LoRaWAN/master/Docs/State-Machine.png)
