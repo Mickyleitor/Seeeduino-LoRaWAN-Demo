@@ -30,7 +30,7 @@ uint8_t frame_counter = 0;
 
 // This value should be changed, it's the physical address
 // Example: '1' will be device 1.
-unsigned char myID = 0;
+unsigned char myID = '0';
 
 unsigned char message[MAX_PAYLOAD];
 unsigned char buffer [256];
@@ -43,7 +43,7 @@ void setup(void)
     Serial.begin(9600);
     SerialUSB.begin(115200);
     randomSeed(analogRead(0));
-    if(myID == 0){
+    if((myID == 0) || (myID == '0')){
       digitalWrite(LED_BUILTIN,HIGH);
       status = 3;
     }
@@ -271,7 +271,7 @@ void read_commandFromSerial(){
         SerialUSB.print(buffering);
         SerialUSB.println("]");
         SerialUSB.println("Format is [cmd:ADDR@COMMAND]");
-        SerialUSB.println("Valid commands:\n'a' : Get analogical value of A0\n'b' : Get RSSI from both devices\n'c' : Get GPS based latitute position\n'd' : Get GPS based longitude position");
+        SerialUSB.println("Valid commands:\n'a' : Get analogical value of A0\n'b' : Get RSSI from both devices\n'c' : Get GPS based latitude position\n'd' : Get GPS based longitude position");
         
       }
     }
