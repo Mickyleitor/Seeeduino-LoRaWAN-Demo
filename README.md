@@ -23,3 +23,8 @@ And COMMAND is the type of command you will request to the other board. 1 charac
 
 ## Technical Diagram of the Finite state machine
 ![Finite-State machine](https://raw.githubusercontent.com/Mickyleitor/PervasiveSystem2018_LoRaWAN/master/Docs/State-Machine.png)
+
+
+## Credits
+
+Michele La Malva Moreno - ![LinkedIn](https://www.linkedin.com/in/michele-la-malva-moreno/)
