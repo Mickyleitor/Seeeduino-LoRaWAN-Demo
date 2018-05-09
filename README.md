@@ -27,4 +27,4 @@ And COMMAND is the type of command you will request to the other board. 1 charac
 
 ## Credits
 
-Michele La Malva Moreno - ![LinkedIn](https://www.linkedin.com/in/michele-la-malva-moreno/)
+Michele La Malva Moreno - [LinkedIn](https://www.linkedin.com/in/michele-la-malva-moreno/)
