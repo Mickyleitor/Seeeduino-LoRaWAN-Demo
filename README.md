@@ -1,4 +1,4 @@
-# PervasiveSystem2018_LoRaWAN
+# Seeduino LoRaWAN Board Demostration
 Hands-On Example to demostrate the technology behind LoRaWAN with Seeeduino LoRa board
 
 ## Visual representation
