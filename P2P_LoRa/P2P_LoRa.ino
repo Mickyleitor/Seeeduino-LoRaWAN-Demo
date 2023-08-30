@@ -218,30 +218,18 @@ void build_MessageAskCMD(unsigned char DeviceID,unsigned char command){
     message[4]= frame_counter++;
 }
 
-// Writting log functions.
-// A few versions is provided, supporting up to 2 values to be formatted.
+void writeLogMessage(const char* format, ...) {
+    const int bufferSize = 256;
+    char buffer[bufferSize];
 
-void writeLogMessage(char * text){
-    SerialUSB.print(myID);
-    SerialUSB.print(" : ");
-    SerialUSB.println(text);
-}
+    va_list args;
+    va_start(args, format);
+    vsnprintf(buffer, bufferSize, format, args);
+    va_end(args);
 
-void writeLogMessage(char * text, unsigned char value1){
-    char LogMessages [256];
-    memset(LogMessages, 0, 256);
-    sprintf(LogMessages,text, value1);
     SerialUSB.print(myID);
     SerialUSB.print(" : ");
-    SerialUSB.println(LogMessages);
-}
-void writeLogMessage(char * text, unsigned char value1,unsigned char value2){
-    char LogMessages [256];
-    memset(LogMessages, 0, 256);
-    sprintf(LogMessages,text, value1,value2);
-    SerialUSB.print(myID);
-    SerialUSB.print(" : ");
-    SerialUSB.println(LogMessages);
+    SerialUSB.println(buffer);
 }
 
 // This functions read streams from serial and decode it
